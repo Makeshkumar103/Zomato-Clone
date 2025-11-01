@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page for Zomato</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        form{
+            height: 500px; width: 400px;
+            background-color: white;
+            margin: 20px;
+            padding:  5px 20px;
+            border-radius: 5px; 
+            align-items: center;
+            position: fixed;
+            top: 10%; left: 35%;
+        }
+        h1{
+            /* font-weight: ; */
+            display: inline;
+        }
+        input,select{
+            height: 30px;
+            margin: 0px 5px;
+            border: none;
+        }
+        #x{
+            float: right;
+            margin: 10px;
+            border: none;
+            border-radius: 50%;
+            padding: 2px;
+            font: bolder;
+            background-color: white;
+            /* visibility: hidden; */
+        }
+        #x:hover{
+            border:1px solid rgb(110, 104, 104);
+        }
+        #ca{
+            /* align-items: center;
+            justify-content: center; */
+            text-align: center;
+            margin: 10px 25px;
+            background: gray;
+            color: white;
+            padding: 10px;
+            height: 45px;
+            width: 350px;
+            border-radius: 5px;
+            border-color: gray;
+        }
+        fieldset{
+            text-align: center;
+            border-left: none;
+            border-right: none;
+        }
+        fieldset>button{
+            height: 45px;
+            width: 350px;
+            border-radius: 5px;
+            margin: 18px;
+            background-color: white;
+        }
+        p{
+            display: inline;
+        }
+        span{
+            color: red;
+        }
+        #ip{
+            margin: 10px 20px;
+            border: 0.5px solid gray;
+            background:none;
+            color: white;
+            padding: 10px;
+            height: 20px;
+            width: 335px;
+            border-radius: 5px;
+        }
+        #cb{
+            margin: 10px 20px;
+            height: 15px; width: 15px;
+        }
+        label{
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>Sign up</h1><a href="#">     
+            <button id="x">X</button></a><br>
+            <input type="text" placeholder="Full Name" id="ip">
+            <input type="email" placeholder="Email" id="ip">
+            <input type="checkbox" id="cb">
+            <label for="">I agree to zomato's <span>Terms of service, Privacy Policy</span> and <span>Content Policies</span></label>
+        <button id="ca">Create account</button><br><br>
+        <fieldset><legend>Or</legend>
+            <button>Continue with Google</button>    
+        </fieldset>   <br><br>
+    <p>Already have an account?</p>
+<p><span>Log in</span></p> </form>
+</body>
+</html>

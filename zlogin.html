@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page for Zomato</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        form{
+            height: 500px; width: 400px;
+            background-color: white;
+            margin: 20px;
+            padding:  5px 20px;
+            border-radius: 5px; 
+            align-items: center;
+            position: fixed;
+            top: 10%; left: 35%;
+        }
+        h1{
+            /* font-weight: ; */
+            display: inline;
+        }
+        div{
+            height: 35px;
+            border: 2px solid black;
+            border-radius: 3px;
+            margin: 25px;
+            padding: 1px 0px;
+            text-align: center;
+        }
+        div>input{
+            /* background-color: gray; */
+            width: 220px;
+            height: 28px;
+        }
+        input,select{
+            height: 30px;
+            margin: 0px 5px;
+            border: none;
+        }
+        #x{
+            float: right;
+            margin: 10px;
+            border: none;
+            font: bolder;
+            background-color: white;
+        }
+       
+        #sotp{
+            /* align-items: center;
+            justify-content: center; */
+            text-align: center;
+            margin: 10px 25px;
+            background: red;
+            color: white;
+            padding: 10px;
+            height: 45px;
+            width: 350px;
+            border-radius: 5px;
+        }
+        fieldset{
+            text-align: center;
+            border-left: none;
+            border-right: none;
+        }
+        fieldset>button{
+            height: 45px;
+            width: 350px;
+            border-radius: 5px;
+            margin: 18px;
+            background-color: white;
+        }
+        p{
+            display: inline;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h1>Login</h1><a href="#"><button id="x">X</button></a>
+        <div>
+            <i></i>
+            <select name="cc" id="cc">
+                <option value="+91">+91</option>
+                <option value="+91">+91</option>
+                <option value="+91">+91</option>
+                <option value="+91">+91</option>
+                <option value="+91">+91</option>
+                <option value="+91">+91</option>
+            </select> | <input type="text" placeholder="Phone">
+        </div>
+        <button id="sotp">Send One Time Password</button><br><br>
+        <fieldset><legend>Or</legend>
+            <button>Continue with Email</button>
+            <button>Continue with Google</button>
+    
+        </fieldset>   <br><br>
+    <p>New to Zomato?</p>
+<p><span>Create account</span></p> </form>
+</body>
+</html>
