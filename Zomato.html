@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zomato replica</title>
+    <title>Zomato Clone</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/zomato.css">
     <link rel="icon" href="/zoto/Manchurian Noodles.jpg">    
@@ -12,11 +12,12 @@
 <body>
    <div class="mainclass">
    <header>
-    <h2>Zomato</h2>
-    <form>
-         <label for="Place"></label>
-         <i class="fa-solid fa-location-dot" id="location"></i>
-         <select name="Place" id="Place" >
+      <div class="container flex">
+         <h2>Zomato</h2>
+         <form>
+            <label for="Place"></label>
+            <i class="fa-solid fa-location-dot" id="location"></i>
+            <select name="Place" id="Place" >
             <option value="Place">Chennai</option>
             <option value="Place">Coimbatore</option>
             <option value="Place">Madurai</option>
@@ -24,21 +25,28 @@
             <option value="Place">Tirchy</option>
             <option value="Place">Thoothukkudi</option>
             <option value="Place">Tirunelveli</option>
-         </select>
-         <span>|</span>
-         <label for="search"></label>
-         <a href="#">
-            <i class="fa-solid fa-magnifying-glass fa-xs" style="--fa-primary-color: #ff0000; --fa-secondary-color: #ff0000;"></i>
-         </a>
-         <input type="search" placeholder="Search for restaurant,cuisine or a dish" id="search">
-    </form>
-    <aside>
-      <a href="/zlogin.html"><input type="button" value="Log in"></a>
-      <a href="/zsignup.html"><input type="button" value="Sign up"></a>
-    </aside>
+            </select>
+            <span>|</span>
+            <label for="search"></label>
+            <a href="#">
+               <i class="fa-solid fa-magnifying-glass fa-xs" style="--fa-primary-color: #ff0000; --fa-secondary-color: #ff0000;"></i>
+            </a>
+            <input type="search" placeholder="Search for restaurant,cuisine or a dish" id="search">
+         </form>
+         <ul>
+            <li>
+               <a href="/zlogin.html"><input type="button" value="Log in"></a>
+            </li>
+            <li>
+            <a href="/zsignup.html"><input type="button" value="Sign up"></a>
+            </li>
+         </ul>
+      </div>
+    
    </header>   
-    <nav>
-       <section>
+    <nav class="container">
+      <div class="flex">
+         <section>
          <a href="#"><i class="fa-solid fa-motorcycle fa-xl ji" style="--fa-primary-color: #f70202; --fa-secondary-color: #f90b0b;"></i></a>
         <h3>Delivery</h3> 
        </section>
@@ -50,8 +58,10 @@
          <a href="#"><i class="fa-solid fa-wine-bottle fa-xl ji" style="color: #578dea;"></i></a>
       <h3>Nightlife</h3>
        </section>
+      </div>
+       
     </nav>
-    <nav class="secnav">
+    <nav class="container">
          <ul>
             <li><a href="#">Filters</a></li>
             <li><a href="#">Pure Veg</a></li>
@@ -64,10 +74,11 @@
                </a>
             </li>
          </ul>
-      </nav>
-      <section class="menu-carousel">
-         <h1>Inspiration for your first order</h1><br>
-         <article>
+    </nav>
+   <section class="container">
+            <h1>Inspiration for your first order</h1><br>
+            <div class="menu-carousel flex">
+               <article>
             <figure>
                <img src="/zoto/f9c48017-3ff6-498a-a31a-385b16ae2ca0.jpg" alt="Biriyani">
                <figcaption>Biriyani</figcaption>
@@ -89,11 +100,13 @@
                <img src="/zoto/Manchurian Noodles.jpg" alt="Noodles">
                <figcaption>Noodles</figcaption>
             </figure>
-         </article>            
+         </article>
+         </div>
       <a href=""><p>See More</p></a>
-      </section>
-      <section class="brand-carousel">
-         <h3>Top brands for you</h3>
+   </section>
+   <section class="container">
+      <h3>Top brands for you</h3>
+      <div class="brand-carousel flex">
          <article>
             <figure>
                <img src="/zomo/Starbucks.png" alt="brand1">
@@ -124,6 +137,9 @@
                <figcaption>Pizza Hut</figcaption>
             </figure>
          </article>
+      </div>
+   </section>
+   <main class="container">
       <div class="drc">
 
          <br><h3>Delivery Restaurants in Coimbatore</h3><br>
@@ -206,8 +222,11 @@
              
                <p class="bm">10 min</p>
                <hr></div>
-         </div><br><br>
-         <section class="eon"><br>
+         </div>
+   </main>   
+         
+      <br><br>
+         <section class="eon container"><br>
             <h3>Explore options near me</h3>
             <select name="explore" id="explore">
                <option value="explore">Popular cisines near me</option>
@@ -221,7 +240,7 @@
             <select name="explore" id="explore">
                <option value="explore">Cities We Deliver To</option></select>
          </section>
-         <footer>
+         <footer class="container">
             <nav>
                <h2>Zomato</h2>     
                <select name="country">
@@ -231,7 +250,7 @@
                   <option value="lang">English</option>
                </select>
             </nav>
-            <main>
+            <main class="flex">
                <article>
                <h4>ABOUT ZOMATO</h4>
                <p>Home</p>
