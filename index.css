@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+   color: #1c1c1c;
+   background: #fff;
+   line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+header form:focus-within {
+   border-color: #e23744 !important;
+   box-shadow: 0 0 0 2px rgba(226, 55, 68, 0.15);
+}
+
+/* ===== NAV TABS ===== */
+.nav-tab {
+   cursor: pointer;
+   border-bottom: 2px solid transparent;
+   transition: all 0.2s;
+}
+
+.nav-tab:hover {
+   border-bottom-color: #e23744;
+}
+
+.nav-tab:hover h3 {
+   color: #e23744 !important;
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-btn {
+   text-decoration: none;
+   font-size: 13px;
+   font-weight: 500;
+   color: #1c1c1c;
+   padding: 6px 14px;
+   border: 1px solid #e0e0e0;
+   border-radius: 20px;
+   display: inline-block;
+   transition: all 0.2s;
+}
+
+.filter-btn:hover {
+   background: #f5f5f5;
+   border-color: #ccc;
+   color: #1c1c1c;
+}
+
+/* ===== CAROUSEL IMAGES (circular) ===== */
+.carousel-img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 4px solid #f0f0f0;
+   cursor: pointer;
+   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.carousel-img:hover {
+   transform: scale(1.08);
+   border-color: #e23744;
+   box-shadow: 0 8px 24px rgba(226, 55, 68, 0.2);
+}
+
+/* ===== BRAND IMAGES ===== */
+.brand-img {
+   width: 140px;
+   height: 140px;
+   /* border-radius: 50%; */
+   object-fit: contain;
+   background: #f8f8f8;
+   padding: 20px;
+   border: 1px solid #eee;
+   cursor: pointer;
+   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brand-img:hover {
+   transform: scale(1.06);
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== RESTAURANT GRID ===== */
+.restaurant-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 24px;
+}
+
+.restaurant-card {
+   background: #fff;
+   border-radius: 16px;
+   overflow: hidden;
+   border: 1px solid #f0f0f0;
+   cursor: pointer;
+   transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.restaurant-card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card .card-img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+   display: block;
+}
+
+.restaurant-card .offer-badge {
+   position: relative;
+   display: inline-block;
+   margin: -32px 0 0 12px;
+   padding: 4px 10px;
+   background: #256fef;
+   color: #fff;
+   font-size: 12px;
+   font-weight: 700;
+   border-radius: 4px;
+   z-index: 2;
+}
+
+.restaurant-card .rating-badge {
+   background: #267e3e;
+   color: #fff;
+   padding: 2px 8px;
+   border-radius: 6px;
+   font-size: 13px;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 3px;
+   white-space: nowrap;
+}
+
+/* ===== EXPLORE SECTION ===== */
+.explore-section {
+   background: #fafafa;
+}
+
+.explore-section h3 {
+   margin-top: 0;
+}
+
+.explore-select {
+   height: 52px !important;
+   padding: 0 20px !important;
+   border: 1px solid #e0e0e0 !important;
+   border-radius: 8px !important;
+   font-size: 14px !important;
+   font-weight: 500 !important;
+   color: #1c1c1c !important;
+   background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23696' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 16px center !important;
+   appearance: none !important;
+   cursor: pointer !important;
+}
+
+.explore-select:focus {
+   border-color: #e23744 !important;
+   box-shadow: none !important;
+}
+
+/* ===== AUTH PAGES (Login / Signup) ===== */
+.auth-overlay {
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.6);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 200;
+}
+
+.auth-form {
+   background: #fff;
+   width: 420px;
+   max-width: 94vw;
+   padding: 28px 28px 36px;
+   border-radius: 12px;
+   position: relative;
+   animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+   from { opacity: 0; transform: scale(0.96); }
+   to   { opacity: 1; transform: scale(1); }
+}
+
+.auth-form h1 {
+   font-size: 26px;
+   font-weight: 700;
+   margin: 0 0 20px;
+   display: inline-block;
+}
+
+.auth-form .close-btn {
+   float: right;
+   border: none;
+   background: none;
+   font-size: 20px;
+   color: #999;
+   cursor: pointer;
+   padding: 4px 8px;
+   border-radius: 50%;
+   transition: background 0.2s;
+}
+
+.auth-form .close-btn:hover {
+   background: #f0f0f0;
+   color: #1c1c1c;
+}
+
+.auth-form .phone-input {
+   display: flex;
+   align-items: center;
+   border: 1.5px solid #d0d0d0;
+   border-radius: 8px;
+   padding: 0 12px;
+   height: 48px;
+   margin-bottom: 20px;
+   transition: border-color 0.2s;
+}
+
+.auth-form .phone-input:focus-within {
+   border-color: #e23744;
+}
+
+.auth-form .phone-input select {
+   border: none;
+   outline: none;
+   background: transparent;
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+   width: auto;
+}
+
+.auth-form .phone-input span {
+   color: #ddd;
+   margin: 0 8px;
+}
+
+.auth-form .phone-input input {
+   border: none;
+   outline: none;
+   font-size: 14px;
+   flex: 1;
+   height: 100%;
+}
+
+.auth-form .btn-primary {
+   width: 100%;
+   height: 48px;
+   border: none;
+   border-radius: 8px;
+   font-size: 15px;
+   font-weight: 600;
+   cursor: pointer;
+   background: #e23744;
+   color: #fff;
+   transition: background 0.2s;
+   margin-bottom: 16px;
+}
+
+.auth-form .btn-primary:hover {
+   background: #c41e2b;
+}
+
+.auth-form .btn-primary:disabled {
+   background: #b0b0b0;
+   cursor: not-allowed;
+}
+
+.auth-form fieldset {
+   border: none;
+   border-top: 1px solid #e0e0e0;
+   text-align: center;
+   padding: 0;
+   margin-bottom: 12px;
+}
+
+.auth-form fieldset legend {
+   font-size: 13px;
+   color: #999;
+   padding: 0 12px;
+   font-weight: 500;
+}
+
+.auth-form .btn-secondary {
+   width: 100%;
+   height: 46px;
+   border: 1px solid #d0d0d0;
+   border-radius: 8px;
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+   background: #fff;
+   color: #1c1c1c;
+   transition: all 0.2s;
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+}
+
+.auth-form .btn-secondary:hover {
+   background: #f8f8f8;
+   border-color: #b0b0b0;
+}
+
+.auth-form .auth-footer {
+   text-align: center;
+   font-size: 14px;
+   color: #696969;
+   margin-top: 12px;
+}
+
+.auth-form .auth-footer a {
+   color: #e23744;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.auth-form .auth-footer a:hover {
+   text-decoration: underline;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"] {
+   width: 100%;
+   height: 48px;
+   border: 1.5px solid #d0d0d0;
+   border-radius: 8px;
+   padding: 0 14px;
+   font-size: 14px;
+   outline: none;
+   transition: border-color 0.2s;
+   margin-bottom: 14px;
+}
+
+.auth-form input[type="text"]:focus,
+.auth-form input[type="email"]:focus {
+   border-color: #e23744;
+}
+
+.auth-form .checkbox-group {
+   display: flex;
+   align-items: flex-start;
+   gap: 10px;
+   margin-bottom: 18px;
+   font-size: 13px;
+   color: #696969;
+   line-height: 1.5;
+}
+
+.auth-form .checkbox-group input[type="checkbox"] {
+   margin-top: 3px;
+   width: 16px;
+   height: 16px;
+   accent-color: #e23744;
+   flex-shrink: 0;
+}
+
+.auth-form .checkbox-group span {
+   color: #e23744;
+   font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+footer > div > article {
+   flex: 1;
+   min-width: 150px;
+}
+
+footer li {
+   cursor: pointer;
+   transition: color 0.2s;
+}
+
+footer li:hover {
+   color: #e23744 !important;
+}
+
+.social-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #1c1c1c;
+   transition: background 0.2s;
+   text-decoration: none;
+   color: #fff;
+}
+
+.social-icon:hover {
+   background: #e23744;
+   color: #fff;
+}
+
+.app-badge {
+   border-radius: 8px;
+   max-width: 180px;
+   height: auto;
+   cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+   .restaurant-grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width: 768px) {
+   .restaurant-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 480px) {
+   .restaurant-grid {
+      grid-template-columns: 1fr;
+   }
+}

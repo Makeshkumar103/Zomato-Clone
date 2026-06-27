@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zomato Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="auth-overlay">
+        <form class="auth-form" action="#">
+            <h1>Login</h1>
+            <a href="/index.html"><button type="button" class="close-btn">&times;</button></a>
+
+            <div class="phone-input">
+                <select name="cc">
+                    <option value="+91">+91</option>
+                    <option value="+91">+91</option>
+                    <option value="+91">+91</option>
+                </select>
+                <span>|</span>
+                <input type="text" placeholder="Phone" inputmode="numeric">
+            </div>
+
+            <button type="button" class="btn-primary">Send One Time Password</button>
+
+            <fieldset>
+                <legend>Or</legend>
+            </fieldset>
+
+            <button type="button" class="btn-secondary">
+                <i class="fa-regular fa-envelope"></i> Continue with Email
+            </button>
+            <button type="button" class="btn-secondary">
+                <i class="fa-brands fa-google"></i> Continue with Google
+            </button>
+
+            <p class="auth-footer">
+                New to Zomato? <a href="/signup.html">Create account</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
